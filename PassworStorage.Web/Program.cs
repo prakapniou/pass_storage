@@ -1,3 +1,5 @@
+using PasswordStorage.Web.Models;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -6,6 +8,8 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.Configure<PasswordStorageDataBaseSettings>(
+    builder.Configuration.GetSection("PasswordStorageDatabase"));
 
 var app = builder.Build();
 
