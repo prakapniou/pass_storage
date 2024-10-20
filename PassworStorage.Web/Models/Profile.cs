@@ -7,7 +7,7 @@ public class Profile
 {
     [BsonId]
     [BsonRepresentation(BsonType.ObjectId)]
-    public Guid IdMyProperty { get; set; }
+    public Guid Id { get; set; }
 
     [BsonElement("Name")]
     public string? Name { get; set; }
