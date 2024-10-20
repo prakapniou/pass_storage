@@ -1,0 +1,6 @@
+@PassworStorage.Web_HostAddress = http://localhost:5174
+
+GET {{PassworStorage.Web_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
